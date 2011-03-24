@@ -1,0 +1,16 @@
+Changes
+INSTALL
+LICENSE
+MANIFEST
+META.json
+META.yml
+Makefile.PL
+README
+lib/Featured.pm
+t/failure.t
+t/import.t
+t/say.t
+xt/release/eol.t
+xt/release/no-tabs.t
+xt/release/pod-coverage.t
+xt/release/pod-syntax.t

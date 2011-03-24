@@ -1,0 +1,43 @@
+NAME
+    Featured - Use featured keywords on older Perls
+
+VERSION
+    version 0.000001
+
+SYNOPSIS
+        require 5.006;
+
+        use Featured 'say';
+        say 'hi';
+
+DESCRIPTION
+    Enables the use of features from newer Perl's, without actually needing
+    that version of Perl.
+
+    Tries to enable the features through feature first, if it's available.
+
+FEATURES
+    "say"
+        A minimal re-implementation of say from Perl v5.10 for older
+        versions of Perl.
+
+        On Perl versions that natively support "say", it enables the native
+        version instead.
+
+    "say_io" *expiremental*
+        This exists since this implementation of "say" doesn't support
+        writing to handles other than the currently selected one.
+
+            use Featured 'say_io';
+            open my $fh, '>', 'example.txt';
+            say_io $fh, 'hello';
+
+AUTHOR
+    Brad Gilbert <b2gills@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Brad Gilbert.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

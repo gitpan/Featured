@@ -1,0 +1,63 @@
+{
+   "abstract" : "Use featured keywords on older Perls",
+   "author" : [
+      "Brad Gilbert <b2gills@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110580",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Featured",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "recommends" : {
+            "Package::Stash::XS" : 0
+         },
+         "requires" : {
+            "Package::Stash" : 0,
+            "Scalar::Util" : 0,
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98"
+         }
+      }
+   },
+   "provides" : {
+      "Featured" : {
+         "file" : "lib/Featured.pm",
+         "version" : "0.000001"
+      }
+   },
+   "release_status" : "testing",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/b2gills/Featured/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/b2gills/Featured.git",
+         "web" : "http://github.com/b2gills/Featured"
+      }
+   },
+   "version" : "0.000001"
+}
+
