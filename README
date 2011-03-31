@@ -2,7 +2,7 @@ NAME
     Featured - Use featured keywords on older Perls
 
 VERSION
-    version 0.000001
+    version 0.000002
 
 SYNOPSIS
         require 5.006;

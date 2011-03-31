@@ -20,8 +20,9 @@ no_index:
 provides:
   Featured:
     file: lib/Featured.pm
-    version: 0.000001
+    version: 0.000002
 recommends:
+  Package::Stash: 0.14
   Package::Stash::XS: 0
 requires:
   Package::Stash: 0
@@ -30,4 +31,4 @@ requires:
 resources:
   bugtracker: http://github.com/b2gills/Featured/issues
   repository: git://github.com/b2gills/Featured.git
-version: 0.000001
+version: 0.000002

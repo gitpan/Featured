@@ -1,6 +1,6 @@
 package Featured;
 BEGIN {
-  $Featured::VERSION = '0.000001'; # TRIAL
+  $Featured::VERSION = '0.000002'; # TRIAL
 }
 use strict;
 use warnings;
@@ -32,6 +32,25 @@ BEGIN{
 
   if($has_feature_module){
     feature->import('say');
+  }
+
+  # Monkey patch older versions ( before 0.14 ) of Package::Stash
+  if( $Package::Stash::VERSION < 0.14 ){
+    my $stash = Package::Stash->new('Package::Stash');
+
+    my %package_methods = qw{
+      add_symbol    add_package_symbol
+      remove_symbol remove_package_symbol
+    };
+    while( my($new,$old) = each %package_methods ){
+      no strict 'refs';
+      $new = '&'.$new;
+      $old = 'Package::Stash::'.$old;
+      # make sure that nobody else has already done this
+      unless( $stash->has_package_symbol($new) ){
+        $stash->add_package_symbol($new,\&$old);
+      }
+    }
   }
 }
 
@@ -195,7 +214,7 @@ Featured - Use featured keywords on older Perls
 
 =head1 VERSION
 
-version 0.000001
+version 0.000002
 
 =head1 SYNOPSIS
 

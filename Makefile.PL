@@ -25,7 +25,7 @@ my %WriteMakefileArgs = (
     'Package::Stash' => '0',
     'Scalar::Util' => '0'
   },
-  'VERSION' => '0.000001',
+  'VERSION' => '0.000002',
   'test' => {
     'TESTS' => 't/*.t'
   }
